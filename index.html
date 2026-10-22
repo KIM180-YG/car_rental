@@ -3,178 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Poppins font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>AZoom | Singapore's All-Electric Car Rental</title>
+    <!-- Inter font from Google Fonts (close to Apple's font) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Car_rental.css">
-    <title>AZoom Car Rental</title>
 </head>
 <body>
     <header>
-        <h2>AZoom</h2>
+        <a href="index.html" class="logo">AZoom<span>EV</span></a>
         <nav>
-            <a href="#">Reservation</a>
+            <a href="#fleet">Cars</a>
+            <a href="#">Reserve</a>
             <a href="#">Rent</a>
             <a href="#">Return</a>
             <a href="#">Payment</a>
-            <a href="#">About Us</a>
-            <a href="#">Login/Signup</a>
-            <a href="#">Logout</a>
+            <a href="#carparks">Car Parks</a>
         </nav>
+        <a href="#" class="login">Login</a>
     </header>
+
     <main>
-        <section class="Booking">
-            <p><strong>GO FOR GREEN SAVE EARTH</strong></p>
-            <h1>Rent Your Perfect Car</h1>
-            <h3>Easy, affordable and reliable car rental for every journey</h3>
-            <button type="button">Book a car</button>
+        <!-- Hero -->
+        <section class="hero">
+            <p class="eyebrow">100% Electric. 100% Singapore.</p>
+            <h1>Drive green.<br>Drive Singapore.</h1>
+            <p class="hero-sub">Rent an electric car from just S$80 a day. Pick up at any of our 5 car parks islandwide.</p>
+            <div class="hero-links">
+                <a href="#fleet" class="btn">Book a car</a>
+                <a href="#how" class="link">How it works &rsaquo;</a>
+            </div>
+            <div class="stats">
+                <div><strong>500 km</strong><span>Range on a full charge</span></div>
+                <div><strong>5</strong><span>Car parks islandwide</span></div>
+                <div><strong>S$0</strong><span>Spent on petrol</span></div>
+            </div>
         </section>
-        <section class="promotion">
-            <p><strong>SPECIAL OFFERS</strong></p>
-            <h2>Great Deals for Every Journey</h2>
-            <p>Take advantage of our latest rental promotions</p>
-            <article class="promotion_card">
-                <p>SAVE 20%</p>
-                <p><strong>Weekend Special</strong></p>
-                <p>Enjoy 20% off selected vehicles for weekend rentals.</p>
-                <p>Learn More &rarr;</p>
-            </article>
-            <article class="promotion_card">
-                <p>POPULAR</p>
-                <p><strong>Long-Term Rental</strong></p>
-                <p>Save more when you rent a car for seven days or longer</p>
-                <p>Learn More &rarr;</p>
-            </article>
-            <article class="promotion_card">
-                <p>NEW CUSTOMER</p>
-                <p><strong>First Rental Discount</strong></p>
-                <p>New customers receive a special discount on their first rental</p>
-                <p>Learn More &rarr;</p>
-            </article>
-        </section>
-        <section class="car_select">
-            <p><strong>OUR FLEET</strong></p>
-            <h2>Choose Your Perfect Car</h2>
-            <p>From economical city cars to premium vehicles, we have something for everyone</p>
-            <div class="car_grid">
-                <article class="selections">
-                    <img src="images/economy.jpg" alt="Economy car" class="cars">
-                    <p><strong>ECONOMY</strong></p>
-                    <h3>Economy Car</h3>
-                    <p>Compact and fuel-efficient. Perfect for city driving.</p>
-                    <p class="specs">5 Seats &middot; Automatic</p>
-                    <p><strong>$45</strong>/ day</p>
-                    <a href="#" class="button">Rent now</a>
+
+        <!-- How it works -->
+        <section class="how grey" id="how">
+            <h2>Renting is easy.</h2>
+            <p class="section-sub">Four simple steps from booking to drop-off.</p>
+            <div class="steps">
+                <article class="step">
+                    <span class="num">1</span>
+                    <h3>Reserve</h3>
+                    <p>Pick your car and dates online. Pay securely by credit card.</p>
                 </article>
-                <article class="selections">
-                    <img src="images/sedan.jpg" alt="Comfortable sedan" class="cars">
-                    <p><strong>SEDAN</strong></p>
-                    <h3>Comfort Sedan</h3>
-                    <p>Comfortable and practical for business or leisure</p>
-                    <p class="specs">5 Seats &middot; Automatic</p>
-                    <p><strong>$65</strong>/ day</p>
-                    <a href="#" class="button">Rent now</a>
+                <article class="step">
+                    <span class="num">2</span>
+                    <h3>Pick up</h3>
+                    <p>Show your booking ID at the AZoom counter and drive off fully charged.</p>
                 </article>
-                <article class="selections">
-                    <img src="images/suv.jpg" alt="Family SUV" class="cars">
-                    <p><strong>SUV</strong></p>
-                    <h3>Family SUV</h3>
-                    <p>Spacious and powerful. Great for family trips.</p>
-                    <p class="specs">5 Seats &middot; Automatic</p>
-                    <p><strong>$85</strong>/ day</p>
-                    <a href="#" class="button">Rent now</a>
+                <article class="step">
+                    <span class="num">3</span>
+                    <h3>Return</h3>
+                    <p>Park at any AZoom car park and plug the car into a charger.</p>
                 </article>
-                <article class="selections">
-                    <img src="images/luxury.jpg" alt="Luxury sports car" class="cars">
-                    <p><strong>LUXURY</strong></p>
-                    <h3>Luxury Sports Car</h3>
-                    <p>Premium performance for special occasions.</p>
-                    <p class="specs">5 Seats &middot; Automatic</p>
-                    <p><strong>$120</strong>/ day</p>
-                    <a href="#" class="button">Rent now</a>
+                <article class="step">
+                    <span class="num">4</span>
+                    <h3>Pay</h3>
+                    <p>We check the car and battery, then send your final bill.</p>
                 </article>
             </div>
         </section>
-        <section class="testimonials">
-            <h2>What Our Customers Say</h2>
+
+        <!-- Fleet -->
+        <section class="fleet" id="fleet">
+            <h2>Choose your EV.</h2>
+            <p class="section-sub">Every car is fully electric, fully charged and ready to go.</p>
+            <div class="car_grid">
+                <article class="car">
+                    <img src="images/mg4.jpg" alt="MG4 Electric" class="car-img">
+                    <p class="car-type">Hatchback</p>
+                    <h3>MG4 Electric</h3>
+                    <p class="car-specs">435 km range &middot; 5 seats</p>
+                    <p class="car-price">From <strong>S$80</strong>/day</p>
+                    <a href="#" class="btn btn-small">Rent now</a>
+                </article>
+                <article class="car">
+                    <img src="images/atto3.jpg" alt="BYD Atto 3" class="car-img">
+                    <p class="car-type">Compact SUV</p>
+                    <h3>BYD Atto 3</h3>
+                    <p class="car-specs">420 km range &middot; 5 seats</p>
+                    <p class="car-price">From <strong>S$90</strong>/day</p>
+                    <a href="#" class="btn btn-small">Rent now</a>
+                </article>
+                <article class="car">
+                    <img src="images/ioniq5.jpg" alt="Hyundai Ioniq 5" class="car-img">
+                    <p class="car-type">Family</p>
+                    <h3>Hyundai Ioniq 5</h3>
+                    <p class="car-specs">480 km range &middot; 5 seats</p>
+                    <p class="car-price">From <strong>S$120</strong>/day</p>
+                    <a href="#" class="btn btn-small">Rent now</a>
+                </article>
+                <article class="car">
+                    <img src="images/model3.jpg" alt="Tesla Model 3" class="car-img">
+                    <p class="car-type">Sedan</p>
+                    <h3>Tesla Model 3</h3>
+                    <p class="car-specs">500 km range &middot; 5 seats</p>
+                    <p class="car-price">From <strong>S$130</strong>/day</p>
+                    <a href="#" class="btn btn-small">Rent now</a>
+                </article>
+                <article class="car">
+                    <img src="images/seal.jpg" alt="BYD Seal" class="car-img">
+                    <p class="car-type">Premium</p>
+                    <h3>BYD Seal</h3>
+                    <p class="car-specs">510 km range &middot; 5 seats</p>
+                    <p class="car-price">From <strong>S$160</strong>/day</p>
+                    <a href="#" class="btn btn-small">Rent now</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Promotions -->
+        <section class="promotion grey">
+            <h2>Great deals.</h2>
+            <p class="section-sub">Save more on every trip.</p>
+            <div class="promo_grid">
+                <article class="promo">
+                    <p class="promo-tag">Save 20%</p>
+                    <h3>Weekend Special</h3>
+                    <p>20% off selected cars for weekend rentals.</p>
+                </article>
+                <article class="promo">
+                    <p class="promo-tag">Popular</p>
+                    <h3>Long-Term Rental</h3>
+                    <p>Rent for 7 days or more and pay less per day.</p>
+                </article>
+                <article class="promo">
+                    <p class="promo-tag">New customer</p>
+                    <h3>First Ride Discount</h3>
+                    <p>S$20 off your very first AZoom rental.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Car parks -->
+        <section class="carparks" id="carparks">
+            <h2>Pick up and return islandwide.</h2>
+            <p class="section-sub">All car parks are next to an MRT station and have EV chargers.</p>
+            <div class="carpark_grid">
+                <article class="carpark">
+                    <h3>Jurong East</h3>
+                    <p>West &middot; JEM Basement 2</p>
+                    <p class="chargers">8 chargers</p>
+                </article>
+                <article class="carpark">
+                    <h3>Orchard</h3>
+                    <p>Central &middot; ION Orchard B4</p>
+                    <p class="chargers">6 chargers</p>
+                </article>
+                <article class="carpark">
+                    <h3>Bishan</h3>
+                    <p>Central &middot; Junction 8 B1</p>
+                    <p class="chargers">6 chargers</p>
+                </article>
+                <article class="carpark">
+                    <h3>Tampines</h3>
+                    <p>East &middot; Tampines Mall B2</p>
+                    <p class="chargers">8 chargers</p>
+                </article>
+                <article class="carpark">
+                    <h3>Punggol</h3>
+                    <p>North-East &middot; Waterway Point B2</p>
+                    <p class="chargers">10 chargers</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="testimonials grey">
+            <h2>Loved by Singaporeans.</h2>
             <div class="testimonial-container">
                 <article class="testimonial">
-                    <p>
-                        "The booking process was simple
-                        and the car was excellent."
-                    </p>
+                    <p class="stars">★★★★★</p>
+                    <p>"So easy to book, and the car was fully charged. Will rent again!"</p>
                     <h3>Sarah Tan</h3>
-                    <p>★★★★★</p>
                 </article>
-
                 <article class="testimonial">
-                    <p>
-                        "Great service and very friendly
-                        staff. I will rent again."
-                    </p>
+                    <p class="stars">★★★★★</p>
+                    <p>"Picked up in Tampines, returned in Orchard. Super convenient."</p>
                     <h3>David Lim</h3>
-                    <p>★★★★★</p>
                 </article>
-
                 <article class="testimonial">
-                    <p>
-                        "The prices were reasonable and
-                        the whole process was easy."
-                    </p>
+                    <p class="stars">★★★★★</p>
+                    <p>"My first time driving an EV. Smooth, quiet and no petrol to pay."</p>
                     <h3>Michael Lee</h3>
-                    <p>★★★★★</p>
                 </article>
             </div>
         </section>
     </main>
 
-<footer>
-    <div class="footer-container">
-        <div>
-            <h3>AZoom</h3>
-
-            <p>
-                Your trusted partner for
-                convenient car rental.
-            </p>
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h3>AZoom EV</h3>
+                <p>Singapore's all-electric car rental.</p>
+            </div>
+            <div>
+                <h3>Rent</h3>
+                <ul>
+                    <li><a href="#">Reserve</a></li>
+                    <li><a href="#">Rent</a></li>
+                    <li><a href="#">Return</a></li>
+                    <li><a href="#">Payment</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
         </div>
-
-        <div>
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="#">Reservation</a></li>
-                <li><a href="#">Rent</a></li>
-                <li><a href="#">Return</a></li>
-                <li><a href="#">Payment</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Company</h3>
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Follow Us</h3>
-            <p>
-                Facebook | Instagram | LinkedIn
-            </p>
-        </div>
-
-    </div>
-    <div class="copyright">
-
-        <p>
-            &copy; 2026 AZoom Car Rental.
-            All rights reserved.
-        </p>
-
-    </div>
-
-</footer>
+        <p class="copyright">&copy; 2026 AZoom EV Car Rental Pte Ltd. All rights reserved.</p>
+    </footer>
 </body>
 </html>

@@ -61,58 +61,17 @@ function createCarParkCard(park) {
 
 
 /* -----------------------------------------
-   showCars(filterType)
-   Puts the car cards on the page.
-   filterType is "All" or a car type such as "Sedan".
+   showCars()
+   Puts all the car cards on the page.
 ----------------------------------------- */
-function showCars(filterType) {
+function showCars() {
     // Find the empty <div id="car-grid"> in index.html
     const grid = document.getElementById("car-grid");
-
-    // .filter() makes a NEW array with only the cars that pass the test.
-    // "car => ..." is a short way to write a function (an "arrow function").
-    const list = cars.filter(car => filterType === "All" || car.type === filterType);
 
     // .map() turns every car into its HTML card (an array of text),
     // .join("") glues them into one long piece of text,
     // and innerHTML puts that HTML inside the div.
-    grid.innerHTML = list.map(createCarCard).join("");
-}
-
-
-/* -----------------------------------------
-   setUpFilters()
-   Creates the filter buttons (All, Hatchback,
-   Sedan...) and makes them work when clicked.
------------------------------------------ */
-function setUpFilters() {
-    const filterBar = document.getElementById("car-filters");
-
-    // Make a list of button names: "All" first, then every car's type.
-    // new Set(...) removes repeats, so two Sedans give only one "Sedan" button.
-    // The ... ("spread") copies the items into the new array.
-    const types = ["All", ...new Set(cars.map(car => car.type))];
-
-    // Turn each name into a <button>. The "All" button starts highlighted.
-    // data-type="Sedan" stores the type on the button so we can read it later.
-    filterBar.innerHTML = types
-        .map(type => `<button class="filter${type === "All" ? " active" : ""}" data-type="${type}">${type}</button>`)
-        .join("");
-
-    // Listen for clicks on the whole bar (one listener for all buttons)
-    filterBar.addEventListener("click", function (event) {
-        // event.target is the exact element that was clicked.
-        // Ignore clicks on the gaps between buttons.
-        if (event.target.tagName !== "BUTTON") return;
-
-        // Remove the highlight from every button...
-        filterBar.querySelectorAll(".filter").forEach(btn => btn.classList.remove("active"));
-        // ...then highlight the one that was clicked
-        event.target.classList.add("active");
-
-        // Read data-type from the clicked button and redraw the cars
-        showCars(event.target.dataset.type);
-    });
+    grid.innerHTML = cars.map(createCarCard).join("");
 }
 
 
@@ -133,7 +92,6 @@ function showCarParks() {
    exist and we can fill them.
 ----------------------------------------- */
 document.addEventListener("DOMContentLoaded", function () {
-    setUpFilters();
-    showCars("All");
+    showCars();
     showCarParks();
 });

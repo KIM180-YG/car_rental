@@ -89,8 +89,9 @@ function setUpFilters() {
     const filterBar = document.getElementById("car-filters");
 
     // Make a list of button names: "All" first, then every car's type.
-    // The ... ("spread") copies the items of one array into another.
-    const types = ["All", ...cars.map(car => car.type)];
+    // new Set(...) removes repeats, so two Sedans give only one "Sedan" button.
+    // The ... ("spread") copies the items into the new array.
+    const types = ["All", ...new Set(cars.map(car => car.type))];
 
     // Turn each name into a <button>. The "All" button starts highlighted.
     // data-type="Sedan" stores the type on the button so we can read it later.

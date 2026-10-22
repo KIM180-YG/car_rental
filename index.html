@@ -3,184 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Car_rental.css">
     <title>AZoom Car Rental</title>
+    <!-- Poppins font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Car_rental.css">
 </head>
 <body>
     <header>
-        <h2>AZoom</h2>
+        <a href="index.html" class="logo">A<span>Zoom</span></a>
         <nav>
             <a href="#">Reservation</a>
             <a href="#">Rent</a>
             <a href="#">Return</a>
             <a href="#">Payment</a>
             <a href="#">About Us</a>
-            <a href="#">Login/Signup</a>
-            <a href="#">Logout</a>
         </nav>
+        <a href="#" class="nav-login">Login / Sign up</a>
     </header>
+
     <main>
+        <!-- Hero: the first thing visitors see -->
         <section class="Booking">
-            <p><strong>GO FOR GREEN SAVE EARTH</strong></p>
-            <h1>Rent Your Perfect Car</h1>
-            <h3>Easy, affordable and reliable car rental for every journey</h3>
-            <button type="button">Book a car</button>
+            <div class="hero-text">
+                <p class="tag">GO GREEN, SAVE EARTH</p>
+                <h1>Rent Your <span>Perfect Car</span></h1>
+                <h3>Easy, affordable and reliable car rental for every journey.</h3>
+                <div class="hero-buttons">
+                    <a href="#fleet" class="btn btn-primary">Book a car</a>
+                    <a href="#how" class="btn btn-outline">How it works</a>
+                </div>
+                <div class="hero-stats">
+                    <div><strong>50+</strong><span>Cars</span></div>
+                    <div><strong>4</strong><span>Car parks</span></div>
+                    <div><strong>24/7</strong><span>Support</span></div>
+                </div>
+            </div>
         </section>
-        <section class="promotion">
-            <p><strong>SPECIAL OFFERS</strong></p>
-            <h2>Great Deals for Every Journey</h2>
-            <p>Take advantage of our latest rental promotions</p>
-            <article class="promotion_card">
-                <p>SAVE 20%</p>
-                <p><strong>Weekend Special</strong></p>
-                <p>Enjoy 20% off selected vehicles for weekend rentals.</p>
-                <p>Learn More &rarr;</p>
-            </article>
-            <article class="promotion_card">
-                <p>POPULAR</p>
-                <p><strong>Long-Term Rental</strong></p>
-                <p>Save more when you rent a car for seven days or longer</p>
-                <p>Learn More &rarr;</p>
-            </article>
-            <article class="promotion_card">
-                <p>NEW CUSTOMER</p>
-                <p><strong>First Rental Discount</strong></p>
-                <p>New customers receive a special discount on their first rental</p>
-                <p>Learn More &rarr;</p>
-            </article>
-        </section>
-        <section class="car_select">
-            <p><strong>OUR FLEET</strong></p>
-            <h2>Choose Your Perfect Car</h2>
-            <p>From economical city cars to premium vehicles, we have something for everyone</p>
-            <div class="car_grid">
-                <article class="selections">
-                    <img src="images/economy.jpg" alt="Economy car" class="cars">
-                    <p><strong>ECONOMY</strong></p>
-                    <h3>Economy Car</h3>
-                    <p>Compact and fuel-efficient. Perfect for city driving.</p>
-                    <p>------------------</p>
-                    <p>5 Seats Automatic</p>
-                    <p>------------------</p>
-                    <p><strong>$45</strong>/ day</p>
-                    <a href="#" class="button">Rent now</a>
+
+        <!-- How it works: the 4 steps of renting -->
+        <section class="how" id="how">
+            <p class="tag">HOW IT WORKS</p>
+            <h2>Rent a Car in 4 Easy Steps</h2>
+            <div class="steps">
+                <article class="step">
+                    <span class="step-num">1</span>
+                    <h3>Reserve online</h3>
+                    <p>Choose your car and dates, then pay securely by credit card.</p>
                 </article>
-                <article class="selections">
-                    <img src="images/sedan.jpg" alt="Comfortable sedan" class="cars">
-                    <p><strong>SEDAN</strong></p>
-                    <h3>Comfort Sedan</h3>
-                    <p>Comfortable and practical for business or leisure</p>
-                    <p>------------------</p>
-                    <p>5 Seats Automatic</p>
-                    <p>------------------</p>
-                    <p><strong>$65</strong>/ day</p>
-                    <a href="#" class="button">Rent now</a>
+                <article class="step">
+                    <span class="step-num">2</span>
+                    <h3>Pick up</h3>
+                    <p>Collect your car at the AZoom office with your booking ID.</p>
                 </article>
-                <article class="selections">
-                    <img src="images/suv.jpg" alt="Family SUV" class="cars">
-                    <p><strong>SUV</strong></p>
-                    <h3>Family SUV</h3>
-                    <p>Spacious and powerful. Great for family trips.</p>
-                    <p>------------------</p>
-                    <p>5 Seats Automatic</p>
-                    <p>------------------</p>
-                    <p><strong>$85</strong>/ day</p>
-                    <a href="#" class="button">Rent now</a>
+                <article class="step">
+                    <span class="step-num">3</span>
+                    <h3>Return</h3>
+                    <p>Drop the car at any of our designated car parks.</p>
                 </article>
-                <article class="selections">
-                    <img src="images/luxury.jpg" alt="Luxury sports car" class="cars">
-                    <p><strong>LUXURY</strong></p>
-                    <h3>Luxury Sports Car</h3>
-                    <p>Premium performance for special occasions.</p>
-                    <p>------------------</p>
-                    <p>5 Seats Automatic</p>
-                    <p>------------------</p>
-                    <p><strong>$120</strong>/ day</p>
-                    <a href="#" class="button">Rent now</a>
+                <article class="step">
+                    <span class="step-num">4</span>
+                    <h3>Pay final bill</h3>
+                    <p>We inspect the car and send your final bill. No surprises.</p>
                 </article>
             </div>
         </section>
+
+        <section class="promotion">
+            <p class="tag">SPECIAL OFFERS</p>
+            <h2>Great Deals for Every Journey</h2>
+            <p class="subtitle">Take advantage of our latest rental promotions.</p>
+            <div class="promo_grid">
+                <article class="promotion_card">
+                    <span class="badge">SAVE 20%</span>
+                    <h3>Weekend Special</h3>
+                    <p>Enjoy 20% off selected vehicles for weekend rentals.</p>
+                    <a href="#">Learn More &rarr;</a>
+                </article>
+                <article class="promotion_card">
+                    <span class="badge">POPULAR</span>
+                    <h3>Long-Term Rental</h3>
+                    <p>Save more when you rent a car for seven days or longer.</p>
+                    <a href="#">Learn More &rarr;</a>
+                </article>
+                <article class="promotion_card">
+                    <span class="badge">NEW CUSTOMER</span>
+                    <h3>First Rental Discount</h3>
+                    <p>New customers receive a special discount on their first rental.</p>
+                    <a href="#">Learn More &rarr;</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="car_select" id="fleet">
+            <p class="tag">OUR FLEET</p>
+            <h2>Choose Your Perfect Car</h2>
+            <p class="subtitle">From economical city cars to premium vehicles, we have something for everyone.</p>
+            <div class="car_grid">
+                <article class="selections">
+                    <img src="images/economy.jpg" alt="Economy car" class="cars">
+                    <span class="badge">ECONOMY</span>
+                    <h3>Economy Car</h3>
+                    <p>Compact and fuel-efficient. Perfect for city driving.</p>
+                    <ul class="specs">
+                        <li>5 Seats</li>
+                        <li>Automatic</li>
+                    </ul>
+                    <div class="card-bottom">
+                        <p class="price"><strong>$45</strong> / day</p>
+                        <a href="#" class="button">Rent now</a>
+                    </div>
+                </article>
+                <article class="selections">
+                    <img src="images/sedan.jpg" alt="Comfortable sedan" class="cars">
+                    <span class="badge">SEDAN</span>
+                    <h3>Comfort Sedan</h3>
+                    <p>Comfortable and practical for business or leisure.</p>
+                    <ul class="specs">
+                        <li>5 Seats</li>
+                        <li>Automatic</li>
+                    </ul>
+                    <div class="card-bottom">
+                        <p class="price"><strong>$65</strong> / day</p>
+                        <a href="#" class="button">Rent now</a>
+                    </div>
+                </article>
+                <article class="selections">
+                    <img src="images/suv.jpg" alt="Family SUV" class="cars">
+                    <span class="badge">SUV</span>
+                    <h3>Family SUV</h3>
+                    <p>Spacious and powerful. Great for family trips.</p>
+                    <ul class="specs">
+                        <li>7 Seats</li>
+                        <li>Automatic</li>
+                    </ul>
+                    <div class="card-bottom">
+                        <p class="price"><strong>$85</strong> / day</p>
+                        <a href="#" class="button">Rent now</a>
+                    </div>
+                </article>
+                <article class="selections">
+                    <img src="images/luxury.jpg" alt="Luxury sports car" class="cars">
+                    <span class="badge">LUXURY</span>
+                    <h3>Luxury Sports Car</h3>
+                    <p>Premium performance for special occasions.</p>
+                    <ul class="specs">
+                        <li>2 Seats</li>
+                        <li>Automatic</li>
+                    </ul>
+                    <div class="card-bottom">
+                        <p class="price"><strong>$120</strong> / day</p>
+                        <a href="#" class="button">Rent now</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
         <section class="testimonials">
+            <p class="tag">REVIEWS</p>
             <h2>What Our Customers Say</h2>
             <div class="testimonial-container">
                 <article class="testimonial">
-                    <p>
-                        "The booking process was simple
-                        and the car was excellent."
-                    </p>
+                    <p class="stars">★★★★★</p>
+                    <p>"The booking process was simple and the car was excellent."</p>
                     <h3>Sarah Tan</h3>
-                    <p>★★★★★</p>
                 </article>
-
                 <article class="testimonial">
-                    <p>
-                        "Great service and very friendly
-                        staff. I will rent again."
-                    </p>
+                    <p class="stars">★★★★★</p>
+                    <p>"Great service and very friendly staff. I will rent again."</p>
                     <h3>David Lim</h3>
-                    <p>★★★★★</p>
                 </article>
-
                 <article class="testimonial">
-                    <p>
-                        "The prices were reasonable and
-                        the whole process was easy."
-                    </p>
+                    <p class="stars">★★★★★</p>
+                    <p>"The prices were reasonable and the whole process was easy."</p>
                     <h3>Michael Lee</h3>
-                    <p>★★★★★</p>
                 </article>
             </div>
         </section>
     </main>
 
-<footer>
-    <div class="footer-container">
-        <div>
-            <h3>AZoom</h3>
-
-            <p>
-                Your trusted partner for
-                convenient car rental.
-            </p>
+    <footer>
+        <div class="footer-container">
+            <div>
+                <a href="index.html" class="logo">A<span>Zoom</span></a>
+                <p>Your trusted partner for convenient car rental.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Reservation</a></li>
+                    <li><a href="#">Rent</a></li>
+                    <li><a href="#">Return</a></li>
+                    <li><a href="#">Payment</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <p>Facebook | Instagram | LinkedIn</p>
+            </div>
         </div>
-
-        <div>
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="#">Reservation</a></li>
-                <li><a href="#">Rent</a></li>
-                <li><a href="#">Return</a></li>
-                <li><a href="#">Payment</a></li>
-            </ul>
+        <div class="copyright">
+            <p>&copy; 2026 AZoom Car Rental. All rights reserved.</p>
         </div>
-
-        <div>
-            <h3>Company</h3>
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Follow Us</h3>
-            <p>
-                Facebook | Instagram | LinkedIn
-            </p>
-        </div>
-
-    </div>
-    <div class="copyright">
-
-        <p>
-            &copy; 2026 AZoom Car Rental.
-            All rights reserved.
-        </p>
-
-    </div>
-
-</footer>
+    </footer>
 </body>
 </html>

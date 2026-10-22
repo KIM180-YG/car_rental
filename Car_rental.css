@@ -1,0 +1,340 @@
+/* =========================================
+   Global & Reset
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+/* =========================================
+   Header & Navigation
+========================================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: #2c3e50;
+    color: white;
+}
+
+header h2 {
+    color: #2ecc71;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #2ecc71;
+}
+
+/* =========================================
+   Booking Section (Hero Area)
+========================================= */
+.Booking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 5%;
+    background-color: #e8f5e9;
+    border-bottom: 2px solid #2ecc71;
+}
+
+.Booking p {
+    color: #2ecc71;
+    letter-spacing: 2px;
+}
+
+.Booking h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin: 1rem 0;
+}
+
+.Booking h3 {
+    font-weight: normal;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.Booking button {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Booking button:hover {
+    background-color: #27ae60;
+}
+
+/* =========================================
+   Promotion Section
+========================================= */
+.promotion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.promotion > p:first-of-type,
+.promotion > h2,
+.promotion > p:nth-of-type(2) {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.promotion > p:nth-of-type(2) {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.promotion_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    flex: 1 1 300px;
+    max-width: 350px;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-left: 4px solid #2ecc71;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.promotion_card:hover {
+    transform: translateY(-5px);
+}
+
+.promotion_card p:first-child {
+    font-size: 0.8rem;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.promotion_card p:nth-child(2) {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.promotion_card p:last-child {
+    margin-top: 1.5rem;
+    color: #2ecc71;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.promotion_card p:last-child:hover {
+    color: #27ae60;
+    text-decoration: underline;
+}
+
+/* =========================================
+   Car Selection Section
+========================================= */
+.car_select {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.car_select > p:first-child {
+    color: #2ecc71;
+    letter-spacing: 1px;
+}
+
+.car_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.selections {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.selections:hover {
+    transform: translateY(-5px);
+}
+
+.cars {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    background-color: #f4f4f4; /* Placeholder for missing image */
+    border-radius: 5px;
+}
+
+.selections h3 {
+    margin: 0.5rem 0;
+    color: #2c3e50;
+}
+
+.selections p {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.selections p strong {
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.selections .button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #2ecc71;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.selections .button:hover {
+    background-color: #27ae60;
+}
+
+/* =========================================
+   Testimonials Section
+========================================= */
+.testimonials {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.testimonials h2 {
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial p:first-child {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial h3 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.testimonial p:last-child {
+    color: #f1c40f; /* Gold for stars */
+    letter-spacing: 2px;
+    margin-top: 0.5rem;
+}
+
+/* =========================================
+   Footer
+========================================= */
+footer {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 4rem 5%;
+}
+
+.footer-container h3 {
+    color: #2ecc71;
+    margin-bottom: 1rem;
+}
+
+.footer-container p {
+    color: #bdc3c7;
+}
+
+.footer-container ul {
+    list-style: none;
+}
+
+.footer-container ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-container a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-container a:hover {
+    color: #2ecc71;
+}
+
+.copyright {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #1a252f;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}

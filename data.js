@@ -1,18 +1,11 @@
-/* =========================================
-   AZoom EV - pre-stored data
-   (no database needed: the assignment lets us
-   keep our data in JavaScript arrays)
-========================================= */
-
-// Every car in the fleet. Each car is an object with the same properties.
 const cars = [
     {
         id: "mg4",
         name: "MG4 Electric",
         type: "Hatchback",
-        range: 435,        // km on a full charge
+        range: 435,
         seats: 5,
-        pricePerDay: 80,   // S$
+        pricePerDay: 80,
         image: "images/mg4.jpg",
         status: "Available"
     },
@@ -58,7 +51,6 @@ const cars = [
     }
 ];
 
-// Car parks where customers pick up and return cars.
 const carParks = [
     { id: "jurong",   name: "Jurong East", region: "West",       location: "JEM Basement 2",           chargers: 8 },
     { id: "orchard",  name: "Orchard",     region: "Central",    location: "ION Orchard B4",           chargers: 6 },

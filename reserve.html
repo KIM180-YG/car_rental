@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve a Car | AZoom EV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Car_rental.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">AZoom<span>EV</span></a>
+        <nav>
+            <a href="index.html#fleet">Cars</a>
+            <a href="reserve.html" class="current">Reserve</a>
+            <a href="#">Rent</a>
+            <a href="#">Return</a>
+            <a href="#">Payment</a>
+            <a href="index.html#carparks">Car Parks</a>
+        </nav>
+        <a href="#" class="login">Login</a>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <h1>Reserve your EV.</h1>
+            <p class="section-sub">Choose your dates, pick-up location and pay securely by card.</p>
+        </section>
+
+        <!-- Booking form and live summary side by side -->
+        <section class="reserve-layout" id="reserve-section">
+            <form class="reserve-form" id="reserve-form" novalidate>
+                <fieldset>
+                    <legend>1. Your car</legend>
+                    <label for="car-select">Car</label>
+                    <select id="car-select" required></select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Dates and pick-up</legend>
+                    <div class="form-row">
+                        <div>
+                            <label for="pickup-date">Pick-up date</label>
+                            <input type="date" id="pickup-date" required>
+                        </div>
+                        <div>
+                            <label for="return-date">Return date</label>
+                            <input type="date" id="return-date" required>
+                        </div>
+                    </div>
+                    <label for="pickup-location">Pick-up location</label>
+                    <select id="pickup-location" required></select>
+                    <p class="hint">You can return the car to any AZoom car park at the end of your trip.</p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3. Your details</legend>
+                    <label for="customer-name">Full name</label>
+                    <input type="text" id="customer-name" placeholder="Tan Wei Ming" required>
+                    <div class="form-row">
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="weiming@example.com" required>
+                        </div>
+                        <div>
+                            <label for="phone">Mobile number</label>
+                            <input type="tel" id="phone" placeholder="9123 4567" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>4. Payment</legend>
+                    <label for="card-name">Name on card</label>
+                    <input type="text" id="card-name" placeholder="TAN WEI MING" required>
+                    <label for="card-number">Card number</label>
+                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" inputmode="numeric" required>
+                    <div class="form-row">
+                        <div>
+                            <label for="card-expiry">Expiry (MM/YY)</label>
+                            <input type="text" id="card-expiry" placeholder="08/28" maxlength="5" required>
+                        </div>
+                        <div>
+                            <label for="card-cvv">CVV</label>
+                            <input type="password" id="card-cvv" placeholder="123" maxlength="3" inputmode="numeric" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <p class="form-error" id="form-error"></p>
+                <button type="submit" class="btn btn-full">Reserve and pay</button>
+            </form>
+
+            <aside class="summary" id="summary">
+                <img src="" alt="" class="summary-img" id="summary-img">
+                <p class="car-type" id="summary-type"></p>
+                <h2 id="summary-name"></h2>
+                <p class="car-specs" id="summary-specs"></p>
+                <dl class="summary-lines">
+                    <div><dt>Daily rate</dt><dd id="summary-rate"></dd></div>
+                    <div><dt>Rental days</dt><dd id="summary-days">-</dd></div>
+                    <div><dt>Pick-up</dt><dd id="summary-pickup">-</dd></div>
+                    <div class="summary-total"><dt>Total</dt><dd id="summary-total">-</dd></div>
+                </dl>
+                <p class="hint">Any damage or a battery below 20% at return is added to your final bill.</p>
+            </aside>
+        </section>
+
+        <!-- Shown after a successful booking -->
+        <section class="confirmation" id="confirmation" hidden>
+            <div class="confirm-card">
+                <span class="confirm-tick">&#10003;</span>
+                <h2>Booking confirmed!</h2>
+                <p class="section-sub">Your booking ID is</p>
+                <p class="booking-id" id="confirm-id"></p>
+                <dl class="summary-lines" id="confirm-details"></dl>
+                <p class="hint">Show this booking ID at the AZoom counter when you pick up your car.</p>
+                <a href="index.html" class="btn">Back to home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h3>AZoom EV</h3>
+                <p>Singapore's all-electric car rental.</p>
+            </div>
+            <div>
+                <h3>Rent</h3>
+                <ul>
+                    <li><a href="reserve.html">Reserve</a></li>
+                    <li><a href="#">Rent</a></li>
+                    <li><a href="#">Return</a></li>
+                    <li><a href="#">Payment</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 AZoom EV Car Rental Pte Ltd. All rights reserved.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="reserve.js"></script>
+</body>
+</html>

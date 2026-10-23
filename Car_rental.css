@@ -284,6 +284,32 @@ nav a:hover {
     font-size: 1.4rem;
 }
 
+/* Available / Rented label on each car */
+.status {
+    display: inline-block;
+    margin-top: 0.6rem;
+    padding: 0.15rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status.available {
+    background-color: #e3f6ee;
+    color: var(--green-dark);
+}
+
+.status.rented {
+    background-color: #fde8e8;
+    color: #c0392b;
+}
+
+.btn-disabled,
+.btn-disabled:hover {
+    background-color: #c7c7cc;
+    cursor: not-allowed;
+}
+
 /* =========================================
    Promotions
 ========================================= */

@@ -71,48 +71,8 @@
         <section class="fleet" id="fleet">
             <h2>Choose your EV.</h2>
             <p class="section-sub">Every car is fully electric, fully charged and ready to go.</p>
-            <div class="car_grid">
-                <article class="car">
-                    <img src="images/mg4.jpg" alt="MG4 Electric" class="car-img">
-                    <p class="car-type">Hatchback</p>
-                    <h3>MG4 Electric</h3>
-                    <p class="car-specs">435 km range &middot; 5 seats</p>
-                    <p class="car-price">From <strong>S$80</strong>/day</p>
-                    <a href="#" class="btn btn-small">Rent now</a>
-                </article>
-                <article class="car">
-                    <img src="images/atto3.jpg" alt="BYD Atto 3" class="car-img">
-                    <p class="car-type">Compact SUV</p>
-                    <h3>BYD Atto 3</h3>
-                    <p class="car-specs">420 km range &middot; 5 seats</p>
-                    <p class="car-price">From <strong>S$90</strong>/day</p>
-                    <a href="#" class="btn btn-small">Rent now</a>
-                </article>
-                <article class="car">
-                    <img src="images/ioniq5.jpg" alt="Hyundai Ioniq 5" class="car-img">
-                    <p class="car-type">Family</p>
-                    <h3>Hyundai Ioniq 5</h3>
-                    <p class="car-specs">480 km range &middot; 5 seats</p>
-                    <p class="car-price">From <strong>S$120</strong>/day</p>
-                    <a href="#" class="btn btn-small">Rent now</a>
-                </article>
-                <article class="car">
-                    <img src="images/model3.jpg" alt="Tesla Model 3" class="car-img">
-                    <p class="car-type">Sedan</p>
-                    <h3>Tesla Model 3</h3>
-                    <p class="car-specs">500 km range &middot; 5 seats</p>
-                    <p class="car-price">From <strong>S$130</strong>/day</p>
-                    <a href="#" class="btn btn-small">Rent now</a>
-                </article>
-                <article class="car">
-                    <img src="images/seal.jpg" alt="BYD Seal" class="car-img">
-                    <p class="car-type">Premium</p>
-                    <h3>BYD Seal</h3>
-                    <p class="car-specs">510 km range &middot; 5 seats</p>
-                    <p class="car-price">From <strong>S$160</strong>/day</p>
-                    <a href="#" class="btn btn-small">Rent now</a>
-                </article>
-            </div>
+            <!-- Car cards are added by script.js from the cars array in data.js -->
+            <div class="car_grid" id="car-grid"></div>
         </section>
 
         <!-- Promotions -->
@@ -142,33 +102,8 @@
         <section class="carparks" id="carparks">
             <h2>Pick up and return islandwide.</h2>
             <p class="section-sub">All car parks are next to an MRT station and have EV chargers.</p>
-            <div class="carpark_grid">
-                <article class="carpark">
-                    <h3>Jurong East</h3>
-                    <p>West &middot; JEM Basement 2</p>
-                    <p class="chargers">8 chargers</p>
-                </article>
-                <article class="carpark">
-                    <h3>Orchard</h3>
-                    <p>Central &middot; ION Orchard B4</p>
-                    <p class="chargers">6 chargers</p>
-                </article>
-                <article class="carpark">
-                    <h3>Bishan</h3>
-                    <p>Central &middot; Junction 8 B1</p>
-                    <p class="chargers">6 chargers</p>
-                </article>
-                <article class="carpark">
-                    <h3>Tampines</h3>
-                    <p>East &middot; Tampines Mall B2</p>
-                    <p class="chargers">8 chargers</p>
-                </article>
-                <article class="carpark">
-                    <h3>Punggol</h3>
-                    <p>North-East &middot; Waterway Point B2</p>
-                    <p class="chargers">10 chargers</p>
-                </article>
-            </div>
+            <!-- Car park cards are added by script.js from the carParks array in data.js -->
+            <div class="carpark_grid" id="carpark-grid"></div>
         </section>
 
         <!-- Reviews -->
@@ -229,5 +164,9 @@
         </div>
         <p class="copyright">&copy; 2026 AZoom EV Car Rental Pte Ltd. All rights reserved.</p>
     </footer>
+
+    <!-- data.js must load first, because script.js uses its arrays -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

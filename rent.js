@@ -50,7 +50,6 @@ function handleSearch(event) {
 function handleRent(event) {
     event.preventDefault();
     const errorBox = document.getElementById("rent-error");
-    const battery = Number(document.getElementById("start-battery").value);
 
     if (!document.getElementById("check-licence").checked) {
         errorBox.textContent = "Please check the customer's driving licence.";
@@ -60,16 +59,11 @@ function handleRent(event) {
         errorBox.textContent = "Please check that the payment card matches.";
         return;
     }
-    if (battery < 0 || battery > 100) {
-        errorBox.textContent = "The battery level must be between 0 and 100.";
-        return;
-    }
     errorBox.textContent = "";
 
     const bookings = getBookings();
     const booking = bookings.find(item => item.id === currentBooking.id);
     booking.status = "Rented";
-    booking.startBattery = battery;
     booking.collectedDate = todayString();
     saveBookings(bookings);
 
@@ -84,7 +78,6 @@ function showDone(booking) {
         <div><dt>Car</dt><dd>${car.name}</dd></div>
         <div><dt>Customer</dt><dd>${booking.customerName}</dd></div>
         <div><dt>Collected</dt><dd>${booking.collectedDate}</dd></div>
-        <div><dt>Battery</dt><dd>${booking.startBattery}%</dd></div>
         <div><dt>Return by</dt><dd>${booking.returnDate}</dd></div>
     `;
 

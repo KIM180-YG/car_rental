@@ -25,7 +25,7 @@
     <main>
         <section class="page-title">
             <h1>Inspect the EV.</h1>
-            <p class="section-sub">For AZoom staff: check a returned car for damage and battery level.</p>
+            <p class="section-sub">For AZoom staff: check a returned car for damage.</p>
         </section>
 
         <section class="reserve-layout">
@@ -46,14 +46,10 @@
                         <div id="damage-options"></div>
                     </fieldset>
                     <fieldset>
-                        <legend>3. Battery</legend>
-                        <label for="end-battery">Battery level at return (%)</label>
-                        <input type="number" id="end-battery" min="0" max="100" value="80">
-                        <p class="hint">A battery below 20% adds a S$30 recharge fee.</p>
+                        <legend>3. Notes</legend>
                         <label for="notes">Notes</label>
                         <input type="text" id="notes" placeholder="Small scratch on rear bumper">
                     </fieldset>
-                    <p class="form-error" id="inspect-error"></p>
                     <button type="submit" class="btn btn-full">Save inspection</button>
                 </form>
             </div>

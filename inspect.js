@@ -12,7 +12,6 @@ function showBooking(booking) {
         <div><dt>Customer</dt><dd>${booking.customerName}</dd></div>
         <div><dt>Returned to</dt><dd>${park.name}</dd></div>
         <div><dt>Returned on</dt><dd>${booking.returnedDate}</dd></div>
-        <div><dt>Battery at pick-up</dt><dd>${booking.startBattery}%</dd></div>
     `;
     document.getElementById("booking-card").hidden = false;
 }
@@ -35,20 +34,13 @@ function getChosenDamages() {
     return Array.from(checked).map(box => damageTypes.find(damage => damage.id === box.value));
 }
 
-function getRechargeFee() {
-    const battery = Number(document.getElementById("end-battery").value);
-    return battery < 20 ? rechargeFee : 0;
-}
-
 function updateCharges() {
     const damages = getChosenDamages();
     const damageCost = damages.reduce((total, damage) => total + damage.cost, 0);
-    const fee = getRechargeFee();
 
     document.getElementById("charge-lines").innerHTML = `
-        <div><dt>Damage (${damages.length})</dt><dd>S$${damageCost}</dd></div>
-        <div><dt>Recharge fee</dt><dd>S$${fee}</dd></div>
-        <div class="summary-total"><dt>Extra charges</dt><dd>S$${damageCost + fee}</dd></div>
+        <div><dt>Damage found</dt><dd>${damages.length}</dd></div>
+        <div class="summary-total"><dt>Damage cost</dt><dd>S$${damageCost}</dd></div>
     `;
 }
 
@@ -89,23 +81,12 @@ function handleSearch(event) {
 
 function handleInspect(event) {
     event.preventDefault();
-    const errorBox = document.getElementById("inspect-error");
-    const battery = Number(document.getElementById("end-battery").value);
-
-    if (document.getElementById("end-battery").value === "" || battery < 0 || battery > 100) {
-        errorBox.textContent = "The battery level must be between 0 and 100.";
-        return;
-    }
-    errorBox.textContent = "";
-
     const damages = getChosenDamages();
     const bookings = getBookings();
     const booking = bookings.find(item => item.id === currentBooking.id);
     booking.status = "Inspected";
     booking.damages = damages.map(damage => damage.id);
     booking.damageCost = damages.reduce((total, damage) => total + damage.cost, 0);
-    booking.endBattery = battery;
-    booking.rechargeFee = getRechargeFee();
     booking.notes = document.getElementById("notes").value.trim();
     saveBookings(bookings);
 
@@ -120,10 +101,7 @@ function showDone(booking) {
     document.getElementById("done-details").innerHTML = `
         <div><dt>Car</dt><dd>${car.name}</dd></div>
         <div><dt>Damage</dt><dd>${damageNames.length ? damageNames.join(", ") : "None"}</dd></div>
-        <div><dt>Battery at return</dt><dd>${booking.endBattery}%</dd></div>
-        <div><dt>Damage cost</dt><dd>S$${booking.damageCost}</dd></div>
-        <div><dt>Recharge fee</dt><dd>S$${booking.rechargeFee}</dd></div>
-        <div class="summary-total"><dt>Extra charges</dt><dd>S$${booking.damageCost + booking.rechargeFee}</dd></div>
+        <div class="summary-total"><dt>Damage cost</dt><dd>S$${booking.damageCost}</dd></div>
     `;
 
     document.querySelector(".reserve-layout").hidden = true;

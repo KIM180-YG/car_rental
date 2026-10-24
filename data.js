@@ -68,8 +68,6 @@ const damageTypes = [
     { id: "cable",      name: "Missing charging cable", cost: 250 }
 ];
 
-const rechargeFee = 30;
-
 const sampleBookings = [
     {
         id: "AZ1001",

@@ -1,9 +1,3 @@
-function todayString() {
-    const today = new Date();
-    today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
-    return today.toISOString().slice(0, 10);
-}
-
 function countDays(startDate, endDate) {
     const start = new Date(startDate);
     const end = new Date(endDate);

@@ -99,3 +99,9 @@ function findCar(carId) {
 function findCarPark(parkId) {
     return carParks.find(park => park.id === parkId);
 }
+
+function todayString() {
+    const today = new Date();
+    today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
+    return today.toISOString().slice(0, 10);
+}

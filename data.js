@@ -58,3 +58,44 @@ const carParks = [
     { id: "tampines", name: "Tampines",    region: "East",       location: "Tampines Mall B2",         chargers: 8 },
     { id: "punggol",  name: "Punggol",     region: "North-East", location: "Waterway Point B2",        chargers: 10 }
 ];
+
+const sampleBookings = [
+    {
+        id: "AZ1001",
+        carId: "ioniq5",
+        customerName: "Sarah Tan",
+        email: "sarah.tan@example.com",
+        phone: "9123 4567",
+        pickupDate: "2026-10-20",
+        returnDate: "2026-10-25",
+        pickupLocation: "tampines",
+        days: 5,
+        rentalCost: 600,
+        cardLast4: "4821",
+        status: "Rented"
+    }
+];
+
+function getBookings() {
+    try {
+        const saved = localStorage.getItem("azoomBookings");
+        if (saved) {
+            return JSON.parse(saved);
+        }
+    } catch (error) {}
+    return sampleBookings.slice();
+}
+
+function saveBookings(bookings) {
+    try {
+        localStorage.setItem("azoomBookings", JSON.stringify(bookings));
+    } catch (error) {}
+}
+
+function findCar(carId) {
+    return cars.find(car => car.id === carId);
+}
+
+function findCarPark(parkId) {
+    return carParks.find(park => park.id === parkId);
+}

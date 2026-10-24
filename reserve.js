@@ -83,7 +83,7 @@ function validateForm(form) {
     if (!form["pickup-location"].value) return "Please choose a pick-up location.";
     if (form["customer-name"].value.trim().length < 2) return "Please enter your full name.";
     if (!/^\S+@\S+\.\S+$/.test(form["email"].value)) return "Please enter a valid email address.";
-    if (!/^[89]\d{3} ?\d{4}$/.test(form["phone"].value.trim())) return "Please enter an 8-digit Singapore mobile number starting with 8 or 9.";
+    if (!/^\d{4} ?\d{4}$/.test(form["phone"].value.trim())) return "Please enter an 8-digit phone number.";
     if (form["card-name"].value.trim().length < 2) return "Please enter the name on your card.";
     if (cardNumber.length !== 16) return "The card number must be 16 digits.";
     if (!isExpiryValid(form["card-expiry"].value)) return "Please enter a valid expiry date (MM/YY) that is not in the past.";

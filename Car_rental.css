@@ -689,3 +689,49 @@ nav a.current {
     height: 20px;
     accent-color: var(--green);
 }
+
+/* =========================================
+   Return Page
+========================================= */
+.park-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.reserve-form .park-option {
+    display: block;
+    margin: 0;
+    padding: 1.2rem;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.reserve-form .park-option input {
+    display: none;
+}
+
+.reserve-form .park-option:has(input:checked) {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.2);
+}
+
+.park-option strong {
+    display: block;
+    font-size: 1.1rem;
+}
+
+.park-option span {
+    display: block;
+    color: var(--grey-text);
+    font-weight: 400;
+}
+
+.park-option .chargers {
+    margin-top: 0.5rem;
+    color: var(--green-dark);
+    font-weight: 600;
+}

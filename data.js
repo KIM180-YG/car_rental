@@ -59,6 +59,15 @@ const carParks = [
     { id: "punggol",  name: "Punggol",     region: "North-East", location: "Waterway Point B2",        chargers: 10 }
 ];
 
+const damageTypes = [
+    { id: "scratch",    name: "Scratch on body",      cost: 100 },
+    { id: "dent",       name: "Dent on body",         cost: 300 },
+    { id: "windscreen", name: "Cracked windscreen",   cost: 500 },
+    { id: "tyre",       name: "Damaged tyre or rim",  cost: 200 },
+    { id: "interior",   name: "Interior stain",       cost: 80 },
+    { id: "cable",      name: "Missing charging cable", cost: 250 }
+];
+
 const sampleBookings = [
     {
         id: "AZ1001",

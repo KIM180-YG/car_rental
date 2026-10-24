@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return a Car | AZoom EV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Car_rental.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">AZoom<span>EV</span></a>
+        <nav>
+            <a href="index.html#fleet">Cars</a>
+            <a href="reserve.html">Reserve</a>
+            <a href="rent.html">Rent</a>
+            <a href="return.html" class="current">Return</a>
+            <a href="#">Payment</a>
+            <a href="index.html#carparks">Car Parks</a>
+        </nav>
+        <a href="#" class="login">Login</a>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <h1>Return your EV.</h1>
+            <p class="section-sub">Finished your trip? Drop the car at any AZoom car park.</p>
+        </section>
+
+        <section class="reserve-layout">
+            <div>
+                <form class="reserve-form" id="search-form" novalidate>
+                    <fieldset>
+                        <legend>1. Find your booking</legend>
+                        <label for="booking-id">Booking ID</label>
+                        <input type="text" id="booking-id" placeholder="AZ1002" required>
+                        <p class="form-error" id="search-error"></p>
+                        <button type="submit" class="btn btn-full">Find booking</button>
+                    </fieldset>
+                </form>
+
+                <form class="reserve-form" id="return-form" novalidate hidden>
+                    <fieldset>
+                        <legend>2. Choose a car park</legend>
+                        <div class="park-options" id="park-options"></div>
+                        <p class="form-error" id="return-error"></p>
+                        <button type="submit" class="btn btn-full">Return car</button>
+                    </fieldset>
+                </form>
+            </div>
+
+            <aside class="summary" id="booking-card" hidden>
+                <img src="" alt="" class="summary-img" id="booking-img">
+                <p class="car-type" id="booking-status"></p>
+                <h2 id="booking-car"></h2>
+                <dl class="summary-lines" id="booking-details"></dl>
+            </aside>
+        </section>
+
+        <section class="confirmation" id="return-done" hidden>
+            <div class="confirm-card">
+                <span class="confirm-tick">&#10003;</span>
+                <h2>Car returned!</h2>
+                <p class="section-sub">Booking</p>
+                <p class="booking-id" id="done-id"></p>
+                <dl class="summary-lines" id="done-details"></dl>
+                <p class="hint">Please leave the key in the AZoom key box. Our staff will inspect the car and send your final bill.</p>
+                <a href="index.html" class="btn">Back to home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h3>AZoom EV</h3>
+                <p>Singapore's all-electric car rental.</p>
+            </div>
+            <div>
+                <h3>Rent</h3>
+                <ul>
+                    <li><a href="reserve.html">Reserve</a></li>
+                    <li><a href="rent.html">Rent</a></li>
+                    <li><a href="return.html">Return</a></li>
+                    <li><a href="#">Payment</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 AZoom EV Car Rental Pte Ltd. All rights reserved.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="return.js"></script>
+</body>
+</html>

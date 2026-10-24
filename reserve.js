@@ -5,8 +5,10 @@ function todayString() {
 }
 
 function countDays(startDate, endDate) {
-    const oneDay = 24 * 60 * 60 * 1000;
-    return Math.round((new Date(endDate) - new Date(startDate)) / oneDay);
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+    const millisecondsInOneDay = 86400000;
+    return (end - start) / millisecondsInOneDay;
 }
 
 function formatDate(dateString) {

@@ -16,7 +16,7 @@
             <a href="rent.html">Rent</a>
             <a href="return.html">Return</a>
             <a href="inspect.html">Inspect</a>
-            <a href="#">Payment</a>
+            <a href="payment.html">Payment</a>
             <a href="index.html#carparks">Car Parks</a>
         </nav>
         <a href="#" class="login">Login</a>
@@ -25,7 +25,7 @@
     <main>
         <section class="page-title">
             <h1>Reserve your EV.</h1>
-            <p class="section-sub">Choose your dates, pick-up location and pay securely by card.</p>
+            <p class="section-sub">Choose your dates and pick-up location. Your card is saved and charged after your trip.</p>
         </section>
 
         <!-- Booking form and live summary side by side -->
@@ -71,7 +71,7 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend>4. Payment</legend>
+                    <legend>4. Card details</legend>
                     <label for="card-name">Name on card</label>
                     <input type="text" id="card-name" placeholder="TAN WEI MING" required>
                     <label for="card-number">Card number</label>
@@ -89,7 +89,7 @@
                 </fieldset>
 
                 <p class="form-error" id="form-error"></p>
-                <button type="submit" class="btn btn-full">Reserve and pay</button>
+                <button type="submit" class="btn btn-full">Reserve</button>
             </form>
 
             <aside class="summary" id="summary">
@@ -101,9 +101,9 @@
                     <div><dt>Daily rate</dt><dd id="summary-rate"></dd></div>
                     <div><dt>Rental days</dt><dd id="summary-days">-</dd></div>
                     <div><dt>Pick-up</dt><dd id="summary-pickup">-</dd></div>
-                    <div class="summary-total"><dt>Total</dt><dd id="summary-total">-</dd></div>
+                    <div class="summary-total"><dt>Rental cost</dt><dd id="summary-total">-</dd></div>
                 </dl>
-                <p class="hint">Any damage found at return is added to your final bill.</p>
+                <p class="hint">Nothing is charged now. You pay the rental plus any damage found at return on the final bill.</p>
             </aside>
         </section>
 
@@ -134,7 +134,7 @@
                     <li><a href="rent.html">Rent</a></li>
                     <li><a href="return.html">Return</a></li>
                     <li><a href="inspect.html">Inspect</a></li>
-                    <li><a href="#">Payment</a></li>
+                    <li><a href="payment.html">Payment</a></li>
                 </ul>
             </div>
             <div>

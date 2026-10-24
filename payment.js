@@ -27,18 +27,14 @@ function createBillLines(booking, lastLabel) {
     return `
         <div><dt>Rental (${booking.days} days × S$${car.pricePerDay})</dt><dd>S$${booking.rentalCost}</dd></div>
         ${damageLines || "<div><dt>Damage</dt><dd>None</dd></div>"}
-        <div><dt>Total</dt><dd>S$${booking.rentalCost + booking.damageCost}</dd></div>
-        <div><dt>Paid at reservation</dt><dd>- S$${booking.rentalCost}</dd></div>
-        <div class="summary-total"><dt>${lastLabel}</dt><dd>S$${booking.damageCost}</dd></div>
+        <div class="summary-total"><dt>${lastLabel}</dt><dd>S$${booking.rentalCost + booking.damageCost}</dd></div>
     `;
 }
 
 function showBill(booking) {
-    document.getElementById("bill-lines").innerHTML = createBillLines(booking, "Amount due");
+    document.getElementById("bill-lines").innerHTML = createBillLines(booking, "Total to pay");
     document.getElementById("bill-notes").textContent = booking.notes ? `Staff notes: ${booking.notes}` : "";
-    document.getElementById("pay-button").textContent = booking.damageCost > 0
-        ? `Pay S$${booking.damageCost} with card **** ${booking.cardLast4}`
-        : "Nothing more to pay. Close booking";
+    document.getElementById("pay-button").textContent = `Pay S$${booking.rentalCost + booking.damageCost} with card **** ${booking.cardLast4}`;
 }
 
 function handleSearch(event) {
@@ -90,7 +86,7 @@ function showDone(booking) {
         <div><dt>Car</dt><dd>${findCar(booking.carId).name}</dd></div>
         <div><dt>Paid on</dt><dd>${booking.paidDate}</dd></div>
         <div><dt>Card</dt><dd>**** ${booking.cardLast4}</dd></div>
-    ` + createBillLines(booking, "Paid today");
+    ` + createBillLines(booking, "Total paid");
 
     document.querySelector(".reserve-layout").hidden = true;
     document.querySelector(".page-title").hidden = true;

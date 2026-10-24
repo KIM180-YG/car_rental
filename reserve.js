@@ -11,10 +11,6 @@ function countDays(startDate, endDate) {
     return (end - start) / millisecondsInOneDay;
 }
 
-function formatDate(dateString) {
-    return new Date(dateString).toLocaleDateString("en-SG", { day: "numeric", month: "short", year: "numeric" });
-}
-
 function fillCarOptions(selectedId) {
     const select = document.getElementById("car-select");
     const availableCars = cars.filter(car => car.status === "Available");
@@ -113,8 +109,8 @@ function showConfirmation(booking) {
     document.getElementById("confirm-id").textContent = booking.id;
     document.getElementById("confirm-details").innerHTML = `
         <div><dt>Car</dt><dd>${car.name}</dd></div>
-        <div><dt>Pick-up</dt><dd>${formatDate(booking.pickupDate)}, ${park.name}</dd></div>
-        <div><dt>Return by</dt><dd>${formatDate(booking.returnDate)}</dd></div>
+        <div><dt>Pick-up</dt><dd>${booking.pickupDate}, ${park.name}</dd></div>
+        <div><dt>Return by</dt><dd>${booking.returnDate}</dd></div>
         <div><dt>Card</dt><dd>**** ${booking.cardLast4}</dd></div>
         <div class="summary-total"><dt>Paid</dt><dd>S$${booking.rentalCost}</dd></div>
     `;

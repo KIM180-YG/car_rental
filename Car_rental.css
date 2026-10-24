@@ -673,3 +673,19 @@ nav a.current {
         transform: translateY(0);
     }
 }
+
+/* =========================================
+   Rent Page
+========================================= */
+.reserve-form .check-label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 500;
+}
+
+.reserve-form .check-label input {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--green);
+}

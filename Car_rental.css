@@ -382,6 +382,35 @@ nav a:hover {
     font-weight: 600;
 }
 
+.office {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: var(--grey-bg);
+    text-align: left;
+}
+
+.office h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.office p {
+    margin-bottom: 0.5rem;
+    color: var(--grey-text);
+}
+
+.office-map {
+    width: 100%;
+    height: 320px;
+    border: none;
+    border-radius: 16px;
+}
+
 /* =========================================
    Testimonials
 ========================================= */
